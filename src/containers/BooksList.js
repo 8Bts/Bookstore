@@ -20,7 +20,7 @@ BooksList.propTypes = {
 };
 
 const mapStateToProps = (state) => ({
-  books: state.books,
+  books: state,
 });
 
-export default connect(mapStateToProps)(BooksList);
+export default connect(mapStateToProps, null)(BooksList);

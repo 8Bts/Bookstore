@@ -10,6 +10,7 @@ const BooksForm = () => {
         Title:
         <input id="bookTitle" type="text" />
       </label>
+      <input type="button" value="Add" />
     </form>
   );
 };

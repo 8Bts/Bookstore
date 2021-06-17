@@ -1,7 +1,20 @@
 const CREATE_BOOK = 'CREATE_BOOK';
 const REMOVE_BOOK = 'REMOVE_BOOK';
 
-const booksReducer = (state = [], action) => {
+const initialState = [
+  {
+    id: Math.round(Math.random() * 1000),
+    title: 'Six Pillars of Self-Esteem',
+    category: 'Sientific',
+  },
+  {
+    id: Math.round(Math.random() * 1000),
+    title: 'Ruby',
+    category: 'Programming',
+  },
+];
+
+const booksReducer = (state = initialState, action) => {
   switch (action.type) {
     case CREATE_BOOK:
       return [...state, action.book];
