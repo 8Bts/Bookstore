@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import Book from '../components/Book';
 
 const BooksList = ({ books }) => (
   <table>
@@ -9,11 +10,7 @@ const BooksList = ({ books }) => (
       <th>category</th>
     </tr>
     {books.map((book) => (
-      <tr key={book.id}>
-        <th>{book.id}</th>
-        <th>{book.title}</th>
-        <th>{book.category}</th>
-      </tr>
+      <Book key={book.id} book={book} />
     ))}
   </table>
 );
