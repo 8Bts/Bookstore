@@ -44,4 +44,8 @@ const BooksForm = ({ createBook }) => {
 
 BooksForm.propTypes = { createBook: PropTypes.func.isRequired };
 
-export default connect(null, Actions)(BooksForm);
+const mapDispatchToProps = {
+  createBook: Actions.createBook,
+};
+
+export default connect(null, mapDispatchToProps)(BooksForm);
