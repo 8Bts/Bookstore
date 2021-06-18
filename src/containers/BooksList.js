@@ -4,14 +4,18 @@ import Book from '../components/Book';
 
 const BooksList = ({ books }) => (
   <table>
-    <tr>
-      <th>id</th>
-      <th>title</th>
-      <th>category</th>
-    </tr>
-    {books.map((book) => (
-      <Book key={book.id} book={book} />
-    ))}
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>title</th>
+        <th>category</th>
+      </tr>
+    </thead>
+    <tbody>
+      {books.map((book) => (
+        <Book key={book.id} book={book} />
+      ))}
+    </tbody>
   </table>
 );
 
