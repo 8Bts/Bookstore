@@ -1,10 +1,13 @@
 import PropTypes from 'prop-types';
 
-const Book = ({ book }) => (
+const Book = ({ book, handleRemoveBook }) => (
   <tr>
-    <th>{book.id}</th>
-    <th>{book.title}</th>
-    <th>{book.category}</th>
+    <td>{book.id}</td>
+    <td>{book.title}</td>
+    <td>{book.category}</td>
+    <td>
+      <button type="button" onClick={() => handleRemoveBook(book.id)}>Delete</button>
+    </td>
   </tr>
 );
 
@@ -14,6 +17,7 @@ Book.propTypes = {
     title: PropTypes.string,
     category: PropTypes.string,
   }).isRequired,
+  handleRemoveBook: PropTypes.func.isRequired,
 };
 
 export default Book;
