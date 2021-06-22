@@ -7,7 +7,10 @@ import CategoryFilter from '../components/CategoryFilter';
 const BooksList = ({
   books, filter, removeBook, changeFilter,
 }) => {
+  const filteredBooks = books.filter((book) => book.category === filter || filter === 'ALL');
+
   const handleRemoveBook = (bookId) => {
+    if (filteredBooks.length === 1) changeFilter('ALL');
     removeBook(bookId);
   };
 
@@ -29,8 +32,7 @@ const BooksList = ({
         </thead>
         <tbody>
           {
-            books.filter((book) => book.category === filter || filter === 'ALL')
-              .map((book) => (
+              filteredBooks.map((book) => (
                 <Book key={book.id} book={book} handleRemoveBook={handleRemoveBook} />
               ))
           }

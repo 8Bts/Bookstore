@@ -8,12 +8,12 @@ const books = [
   {
     id: Math.round(Math.random() * 1000),
     title: 'Six Pillars of Self-Esteem',
-    category: 'Sientific',
+    category: 'Learning',
   },
   {
     id: Math.round(Math.random() * 1000),
     title: 'Ruby',
-    category: 'Programming',
+    category: 'Learning',
   },
 ];
 
