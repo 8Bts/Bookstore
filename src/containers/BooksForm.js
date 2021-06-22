@@ -25,6 +25,7 @@ const BooksForm = ({ createBook }) => {
         title,
         category,
       });
+      setTitle('');
     }
   };
 
@@ -35,7 +36,7 @@ const BooksForm = ({ createBook }) => {
       </select>
       <label htmlFor="bookTitle">
         Title:
-        <input onChange={handleInputChange} id="bookTitle" type="text" />
+        <input onChange={handleInputChange} id="bookTitle" type="text" value={title} />
       </label>
       <input type="submit" value="Add" />
     </form>

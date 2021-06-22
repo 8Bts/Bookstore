@@ -33,7 +33,7 @@ BooksList.propTypes = {
 };
 
 const mapStateToProps = (state) => ({
-  books: state,
+  books: state.books,
 });
 
 const mapDispatchToProps = {

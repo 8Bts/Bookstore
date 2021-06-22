@@ -1,10 +1,28 @@
 import ReactDOM from 'react-dom';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import booksReducer from './reducers/book';
+import reducer from './reducers/index';
 import App from './components/App';
 
-const store = createStore(booksReducer);
+const books = [
+  {
+    id: Math.round(Math.random() * 1000),
+    title: 'Six Pillars of Self-Esteem',
+    category: 'Sientific',
+  },
+  {
+    id: Math.round(Math.random() * 1000),
+    title: 'Ruby',
+    category: 'Programming',
+  },
+];
+
+const initialState = {
+  books,
+  filter: 'ALL',
+};
+
+const store = createStore(reducer, initialState);
 
 ReactDOM.render(
   <Provider store={store}>
