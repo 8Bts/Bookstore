@@ -9,7 +9,12 @@ const Actions = (() => {
     bookId,
   });
 
-  return { createBook, removeBook };
+  const changeFiler = (category) => ({
+    type: 'CHANGE_FILTER',
+    category,
+  });
+
+  return { createBook, removeBook, changeFiler };
 })();
 
 export default Actions;
