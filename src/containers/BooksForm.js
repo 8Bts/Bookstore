@@ -1,11 +1,10 @@
 import { useState } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import Actions from '../actions/index';
+import { createBook } from '../actions/index';
+import CATEGORIES from '../constants/categories';
 
 const BooksForm = ({ createBook }) => {
-  const CATEGORIES = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
-
   const [title, setTitle] = useState('');
   const [category, setCategory] = useState('Action');
 
@@ -25,6 +24,7 @@ const BooksForm = ({ createBook }) => {
         title,
         category,
       });
+      setTitle('');
     }
   };
 
@@ -35,7 +35,7 @@ const BooksForm = ({ createBook }) => {
       </select>
       <label htmlFor="bookTitle">
         Title:
-        <input onChange={handleInputChange} id="bookTitle" type="text" />
+        <input onChange={handleInputChange} id="bookTitle" type="text" value={title} />
       </label>
       <input type="submit" value="Add" />
     </form>
@@ -45,7 +45,7 @@ const BooksForm = ({ createBook }) => {
 BooksForm.propTypes = { createBook: PropTypes.func.isRequired };
 
 const mapDispatchToProps = {
-  createBook: Actions.createBook,
+  createBook,
 };
 
 export default connect(null, mapDispatchToProps)(BooksForm);
