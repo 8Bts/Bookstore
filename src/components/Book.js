@@ -1,25 +1,35 @@
 import PropTypes from 'prop-types';
 
 const Book = ({ book, handleRemoveBook }) => (
-  <li className="list-group-item d-flex">
-    <div className="book-content">
-      <span className="book-category">{book.category}</span>
-      <h2>{book.title}</h2>
-      <span className="book-link pe-4 border-end-1">Comments</span>
-      <span className="book-link px-4">Remove</span>
-      <span className="book-link px-4">Edit</span>
+  <li className="book-item list-group-item d-flex">
+    <div className="book-item-left">
+      <div className="book-content">
+        <span className="book-category">{book.category}</span>
+        <h2 className="book-title">{book.title}</h2>
+        <span className="book-link border-end-1">Comments</span>
+        <span className="pipe" />
+        <button type="button" onClick={() => handleRemoveBook(book.id)} className="btn book-link">Remove</button>
+        <span className="pipe" />
+        <span className="book-link">Edit</span>
+      </div>
     </div>
-    <div className="progress-cont">
-      <div className="oval">0</div>
-      <span className="p-%">10%</span>
+    <div className="book-item-right">
+      <div className="progress-cont">
+        <div className="oval" />
+        <span className="percent">
+          100%
+          <span className="percent-sub">Completed</span>
+        </span>
+      </div>
+      <span className="pipe-2" />
+      <div className="chapter-cont">
+        <span className="ch-label">CURRENT CHAPTER</span>
+        <span className="current-ch">
+          {`Chapter ${Math.round(Math.random() * 100)}`}
+        </span>
+        <button type="button" className="btn btn-primary btn-sm mt-3">UPDATE PROGRESS</button>
+      </div>
     </div>
-    <div className="chapter-cont">
-      <span className="ch-label">Current Chapter</span>
-      <span className="current-ch">
-        {`Chapter ${Math.round(Math.random() * 100)}`}
-      </span>
-    </div>
-    <button type="button" onClick={() => handleRemoveBook(book.id)}>Delete</button>
   </li>
 );
 

@@ -19,7 +19,7 @@ const BooksList = ({
 
   // <CategoryFilter books={books} filter={filter} handleFilterChange={handleFilterChange} />
   return (
-    <div>
+    <div className="book-list">
       <ul className="list-group">
         {
           filteredBooks.map((book) => (
@@ -27,6 +27,7 @@ const BooksList = ({
           ))
         }
       </ul>
+      <div className="line" />
     </div>
   );
 };
