@@ -1,6 +1,6 @@
 # Bookstore
 
-
+Bookstore CMS is a simple web application for tracking book progress. The purpose of the application is to implement React & Redux.
 
 
 ## Built With
@@ -41,7 +41,7 @@
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the <a href="https://github.com/8Bts/Calculator-React.git/issues" target="_blank">issues page</a>.
+Feel free to check the <a href="https://github.com/8Bts/Bookstore.git/issues" target="_blank">issues page</a>.
 
 ## Show your support
 
