@@ -3,6 +3,8 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import reducer from './reducers/index';
 import App from './components/App';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './stylesheets/style.css';
 
 const books = [
   {
@@ -23,7 +25,6 @@ const initialState = {
 };
 
 const store = createStore(reducer, initialState);
-console.log(store.getState());
 ReactDOM.render(
   <Provider store={store}>
     <App />
