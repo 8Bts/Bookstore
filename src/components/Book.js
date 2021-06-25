@@ -27,7 +27,7 @@ const Book = ({ book, handleRemoveBook }) => (
         <span className="current-ch">
           {`Chapter ${Math.round(Math.random() * 100)}`}
         </span>
-        <button type="button" className="btn btn-primary btn-sm mt-3">UPDATE PROGRESS</button>
+        <button type="button" className="update-btn mt-3">UPDATE PROGRESS</button>
       </div>
     </div>
   </li>

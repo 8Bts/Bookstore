@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Book from '../components/Book';
 import { removeBook, changeFilter } from '../actions';
+import CategoryFilter from '../components/CategoryFilter';
 
 const BooksList = ({
   books, filter, removeBook, changeFilter,
@@ -13,13 +14,13 @@ const BooksList = ({
     removeBook(bookId);
   };
 
-  // const handleFilterChange = (category) => {
-  //   changeFilter(category);
-  // };
+  const handleFilterChange = (category) => {
+    changeFilter(category);
+  };
 
-  // <CategoryFilter books={books} filter={filter} handleFilterChange={handleFilterChange} />
   return (
     <div className="book-list">
+      <CategoryFilter books={books} filter={filter} handleFilterChange={handleFilterChange} />
       <ul className="list-group">
         {
           filteredBooks.map((book) => (

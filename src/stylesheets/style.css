@@ -6,6 +6,7 @@
 
 .book-store {
   background-color: #f9f9f9;
+  min-height: 100vh;
 }
 
 .navbar {
@@ -64,6 +65,13 @@
 
 .book-list {
   padding-top: 0.7em;
+  position: relative;
+}
+
+.select-filter {
+  position: absolute;
+  right: 100px;
+  width: 9%;
 }
 
 .book-item {
@@ -205,10 +213,19 @@
   display: block;
   width: 184px;
   height: 33px;
-  margin: 12px 28px 9px 59px;
   padding: 7px 19px 8px 22px;
   border-radius: 3px;
   background-color: #0290ff;
+  border: none;
+  font-family: RobotoSlab;
+  font-size: 13px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: white;
 }
 
 .line{
@@ -216,4 +233,71 @@
   height: 2px;
   margin: 40px auto 29px auto;
   border: solid 1px #e8e8e8;
+}
+
+.add-form {
+  margin: 0 100px;
+  padding-bottom: 8em;
+}
+
+.add-book-h {
+  font-family: Montserrat, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #888;
+}
+
+.title-input {
+  margin: 19px 34px 0 0;
+  padding: 13px 571px 13px 17px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: var(--white);
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.15px;
+  color: #616161;
+}
+
+.select-book {
+  margin: 19px 70px 0;
+  padding: 13px 371px 13px 17px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: var(--white);
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.15px;
+  color: #616161;
+}
+
+.add-btn {
+  width: 184px;
+  height: 45px;
+  margin: 19px 0 0 34px;
+  padding: 12.8px 19px 14.2px 22px;
+  border-radius: 3px;
+  background-color: #0290ff;
+  border: none;
+  font-family: RobotoSlab;
+  font-size: 13px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: white;
 }
